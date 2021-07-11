@@ -1,7 +1,7 @@
 # ExcelWorker
 帮亲戚写的一个Excel管理工具
 
-##ExeclWorker有哪些功能？
+## ExeclWorker有哪些功能？
 
 * 更方便的管理Excel表格
 * 多种收费模式
