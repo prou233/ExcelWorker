@@ -28,8 +28,8 @@ while var == 1 : #循环
         print('---------正在初始化，请稍后---------')
         #读表(pandas)
         dfOld=pd.read_excel('用户表.xls')
-        df = dfOld.fillna(value = '')
-        AvailableLine = len(df)+1 #可用行数
+        df = dfOld.fillna(value = '') #过滤空格
+        AvailableLine = len(df)+1 
 
         #读表(xlrd)
         data = xlrd.open_workbook('用户表.xls',formatting_info=True)
@@ -91,7 +91,7 @@ while var == 1 : #循环
             if (UserName in FileUserName):
                 #搜索用户所在行
                 index = df[df["姓名"]== UserName].index.tolist()[0]
-                # 获取用户名所在行
+                # 获取用户名所在行的所有内容
                 all_row_values = sheet1_object.row_values(rowx=index+1)
                 print('找到了该用户的历史！')
                 print(all_row_values)
